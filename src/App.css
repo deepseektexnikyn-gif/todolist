@@ -1,0 +1,254 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+/* ---------- Навбар ---------- */
+.navbar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a.active { color: #4c7ef3; }
+
+.nav-user {
+  margin-left: auto;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.role-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e8eefc;
+  color: #344c8a;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  background: #ff5b5b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover { background: #e04040; }
+
+/* ---------- Контейнер ---------- */
+.container {
+  max-width: 720px;
+  margin: 30px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06);
+}
+
+h1 { margin-top: 0; }
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Формы входа/регистрации ---------- */
+.form-box {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.form-box h1 { text-align: center; }
+
+.form-box input,
+.form-box select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  background: #4c7ef3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.form-box button:hover { background: #3a6ad4; }
+
+.hint { text-align: center; margin-top: 12px; font-size: 14px; color: #666; }
+.error { color: #c33; font-size: 14px; margin: 0 0 10px; }
+
+.demo-info {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f7f9fc;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.demo-info ul { margin: 6px 0 0; padding-left: 18px; }
+
+/* ---------- Todo-форма ---------- */
+.task-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.task-form input[type='text'] {
+  flex: 1;
+  min-width: 160px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.task-form select,
+.task-form button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-form button {
+  background: #4c7ef3;
+  color: #fff;
+  border: none;
+}
+
+.task-form button:disabled { opacity: .5; cursor: not-allowed; }
+.task-form button:hover:not(:disabled) { background: #3a6ad4; }
+
+/* ---------- Фильтр ---------- */
+.category-filter {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.category-filter button {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #d5dbe8;
+  background: #f7f9fc;
+  cursor: pointer;
+  font-size: 13px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.category-filter button.active {
+  background: #4c7ef3;
+  color: #fff;
+  border-color: #4c7ef3;
+}
+
+.category-filter .count { font-size: 11px; opacity: .75; }
+
+/* ---------- Список задач ---------- */
+.task-list { list-style: none; padding: 0; margin: 0; }
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.task-item:last-child { border-bottom: none; }
+.task-item.done .task-title { text-decoration: line-through; color: #999; }
+
+.task-title { flex: 1; font-size: 15px; }
+
+.badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #e8eefc;
+  color: #344c8a;
+}
+.badge-Работа { background: #ffe5e5; color: #a13636; }
+.badge-Учёба  { background: #e5f1ff; color: #22548a; }
+.badge-Дом    { background: #e5ffe9; color: #226a34; }
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c33;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.delete-btn:hover { background: #ffecec; }
+
+.empty { text-align: center; color: #888; padding: 20px 0; }
+
+.stats {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 16px;
+}
+
+/* ---------- Таблица пользователей ---------- */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.users-table th,
+.users-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eef1f6;
+}
+
+.users-table th { background: #f7f9fc; }
+
+.users-table button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #ff5b5b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.users-table button:disabled { background: #ddd; cursor: not-allowed; }
